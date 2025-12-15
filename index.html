@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name | Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
     <header>
@@ -35,7 +36,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="placeholder_photo.jpg" alt="Your Professional Photo">
+                <img src="profile.jpg" alt="Your Professional Photo">
             </div>
         </div>
     </section>
@@ -65,25 +66,49 @@
             <div class="project-grid">
                 
                 <article class="project-card">
-                    <img src="placeholder_project1.jpg" alt="Project 1 Screenshot">
-                    <h4>E-commerce Platform Redesign</h4>
-                    <p>
-                        A full-stack application built with React and Express, featuring user authentication and a real-time inventory system.
-                    </p>
-                    <p class="tech-stack">**Tech:** React, Node.js, MongoDB</p>
-                    <a href="https://github.com/youruser/project1" target="_blank" class="btn-small">View Code</a>
+                    <img src="project1.jpg" alt="Screenshot of E-commerce Platform">
+                    <div class="project-details">
+                        <h4>E-commerce Platform Redesign</h4>
+                        <p>
+                            A full-stack application built for high performance, featuring user authentication, payment integration, and a real-time inventory system.
+                        </p>
+                        <p class="tech-stack">**Tech:** React, Express, MongoDB, Stripe</p>
+                        <div class="card-links">
+                            <a href="https://github.com/youruser/project1" target="_blank" class="btn-small">View Code</a>
+                            <a href="https://live-demo.com/project1" target="_blank" class="btn-small">Live Demo</a>
+                        </div>
+                    </div>
                 </article>
 
                 <article class="project-card competition-card">
-                    <img src="placeholder_comp.jpg" alt="Competition Project Screenshot">
-                    <h4>AI-Powered Chatbot (Hackathon Winner)</h4>
-                    <p>
-                        1st Place project in the 'Future Tech' Hackathon. Developed a machine learning model for natural language processing.
-                    </p>
-                    <p class="tech-stack">**Tech:** Python, TensorFlow, Flask</p>
-                    <a href="project_details.html" class="btn-small">Case Study</a>
+                    <img src="project2.jpg" alt="Screenshot of AI Chatbot">
+                    <div class="project-details">
+                        <h4>AI-Powered Chatbot (1st Place Hackathon)</h4>
+                        <p>
+                            Award-winning project at the 'Future Tech' Hackathon. Developed a custom NLP model deployed via a lightweight Flask server.
+                        </p>
+                        <p class="tech-stack">**Tech:** Python, TensorFlow, Flask, AWS Lambda</p>
+                        <div class="card-links">
+                            <a href="project_details.html" class="btn-small">Case Study</a>
+                            <a href="competition-link.com" target="_blank" class="btn-small">Award Details</a>
+                        </div>
+                    </div>
                 </article>
 
+                <article class="project-card">
+                    <img src="project3.jpg" alt="Screenshot of Data Visualization Dashboard">
+                    <div class="project-details">
+                        <h4>Real-Time Data Visualization Dashboard</h4>
+                        <p>
+                            A project focusing on data ingestion and visualization, handling high-volume data streams and displaying insights in a dynamic dashboard.
+                        </p>
+                        <p class="tech-stack">**Tech:** Python, Pandas, D3.js, PostgreSQL</p>
+                        <div class="card-links">
+                            <a href="https://github.com/youruser/project3" target="_blank" class="btn-small">View Code</a>
+                        </div>
+                    </div>
+                </article>
+                
                 </div>
         </div>
     </section>
@@ -93,7 +118,7 @@
             <h3>Get In Touch</h3>
             <p>I'm currently seeking roles in [Your desired field]. Let's connect!</p>
             <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
-            <p>Or find me on:</p>
+            <p style="margin-top: 20px;">Or find me on:</p>
             <div class="social-links">
                 <a href="https://github.com/yourusername" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
@@ -103,7 +128,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> [Your Name]. Built with HTML, CSS, and JS.</p>
+            <p>&copy; <span id="current-year"></span> [Your Name]. Crafted with **Modern Code**.</p>
         </div>
     </footer>
 
