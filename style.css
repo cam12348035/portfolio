@@ -1,10 +1,10 @@
 /* --- Global Styles --- */
 :root {
-    --primary-color: #007bff; /* Blue */
-    --secondary-color: #f8f9fa; /* Light Gray */
-    --dark-color: #343a40; /* Dark Gray/Black */
-    --light-text: #ffffff;
-    --font-family: Arial, sans-serif;
+    --primary-color: #5BC0BE; /* Teal/Aqua - For CTAs and accents */
+    --secondary-color: #3A506B; /* Dark Blue/Gray - For secondary containers */
+    --background-color: #1C2833; /* Very Dark Blue/Gray - Main background */
+    --text-color: #EAECEE; /* Light Gray - Main text */
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 * {
@@ -16,8 +16,8 @@
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--dark-color);
-    background: var(--light-text);
+    color: var(--text-color);
+    background: var(--background-color);
 }
 
 .container {
@@ -30,37 +30,45 @@ body {
 a {
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #84DCC6; /* Lighter shade of primary */
+    text-decoration: none;
 }
 
 /* --- Utility Classes --- */
 .section {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 .section h3 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-    border-bottom: 3px solid var(--primary-color);
-    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 2.2em;
+    color: var(--primary-color);
     padding-bottom: 5px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; /* To center the inline-block */
+    position: relative;
+}
+/* Underline effect for H3 */
+.section h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
 }
 
 /* --- Header & Navigation --- */
 header {
-    background: var(--dark-color);
-    color: var(--light-text);
+    background: var(--secondary-color);
+    color: var(--text-color);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 header .container {
@@ -70,7 +78,7 @@ header .container {
 }
 
 header h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 nav ul {
@@ -79,53 +87,55 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav ul li a {
-    color: var(--light-text);
+    color: var(--text-color);
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 
 .cta-link {
     background: var(--primary-color);
+    padding: 8px 15px;
     border-radius: 5px;
+    color: var(--background-color); /* Dark text on light button */
+    transition: background 0.3s;
+}
+.cta-link:hover {
+    background: #4a9e9c;
+    color: var(--background-color);
 }
 
 /* --- Hero Section --- */
 .hero {
-    background: var(--secondary-color);
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
 }
 
 .hero .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center content when not enough space */
     text-align: left;
+    gap: 50px;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 60%;
+    max-width: 600px;
 }
 
 .hero h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
 
 .tagline {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.hero-image {
-    flex: 1;
-    text-align: right;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #BDC3C7;
 }
 
 .hero-image img {
@@ -134,94 +144,112 @@ nav ul li a {
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(91, 192, 190, 0.4);
 }
 
 .social-links a {
-    margin-right: 15px;
+    margin-right: 20px;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* --- About Section --- */
 #about {
-    background: var(--light-text);
+    background: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
 }
 
 .skills-grid {
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: left;
     display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
 .skills-grid ul {
     list-style: none;
     padding: 0;
+    columns: 2; /* Display skills in two columns if space allows */
 }
 
 .skills-grid li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-/* --- Projects Section --- */
+/* --- Projects Section (The Main Change) --- */
 .projects-section {
-    background: var(--secondary-color);
+    background: var(--background-color);
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    /* Forces 3 columns on desktop, adapts to fewer on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px;
 }
 
 .project-card {
-    background: var(--light-text);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
 .project-card img {
     width: 100%;
-    height: 180px;
+    height: 250px; /* Uniform height for images */
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
+}
+
+.project-details {
+    padding: 20px;
 }
 
 .project-card h4 {
-    color: var(--dark-color);
+    color: var(--primary-color);
     margin-bottom: 10px;
+    font-size: 1.4em;
 }
 
 .tech-stack {
     font-size: 0.9em;
-    color: #6c757d;
-    margin-top: 10px;
+    color: #BDC3C7;
+    margin: 10px 0;
+}
+
+.card-links {
+    margin-top: 15px;
 }
 
 .btn-small {
     display: inline-block;
     background: var(--primary-color);
-    color: var(--light-text);
-    padding: 8px 15px;
-    margin-top: 15px;
-    border-radius: 4px;
+    color: var(--background-color);
+    padding: 10px 18px;
+    margin-right: 10px;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 0.9em;
     font-weight: bold;
     transition: background 0.3s;
 }
 
 .btn-small:hover {
-    background: #0056b3;
-    text-decoration: none;
+    background: #4a9e9c;
 }
 
 .competition-card {
@@ -231,70 +259,63 @@ nav ul li a {
 /* --- Contact Section --- */
 .contact-section {
     text-align: center;
-    background: var(--light-text);
+    background: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .cta-button {
     display: inline-block;
     background: var(--primary-color);
-    color: var(--light-text);
-    padding: 12px 30px;
-    margin: 20px 0;
-    border-radius: 5px;
-    font-size: 1.1em;
+    color: var(--background-color);
+    padding: 15px 40px;
+    margin: 25px 0;
+    border-radius: 8px;
+    font-size: 1.2em;
     font-weight: bold;
     transition: background 0.3s;
 }
 
 .cta-button:hover {
-    background: #0056b3;
-    text-decoration: none;
+    background: #4a9e9c;
 }
 
 /* --- Footer --- */
 footer {
-    background: var(--dark-color);
-    color: var(--light-text);
+    background: var(--background-color);
+    color: #8D99AE;
     text-align: center;
     padding: 20px 0;
+    border-top: 1px solid var(--secondary-color);
     font-size: 0.9em;
 }
 
 /* --- Responsive Design (Mobile) --- */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
+@media (max-width: 992px) {
     .hero .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-content, .hero-image {
+    .hero-content {
+        order: 1;
         max-width: 100%;
-        text-align: center;
     }
     
     .hero-image {
-        order: -1; /* Puts image above text on mobile */
-        margin-bottom: 20px;
+        order: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hero h2 {
+        font-size: 3em;
     }
 
-    .hero-image img {
-        width: 150px;
-        height: 150px;
+    /* Project grid will collapse to 1 or 2 columns based on minmax(320px) */
+    .project-card img {
+        height: 200px;
     }
-
-    .section {
-        padding: 40px 0;
+    
+    nav ul li {
+        margin-left: 15px;
     }
 }
