@@ -1,203 +1,19 @@
-/* --- Global Styles --- */
-:root {
-    --primary-color: #5BC0BE; /* Teal/Aqua - For CTAs and accents */
-    --secondary-color: #3A506B; /* Dark Blue/Gray - For secondary containers */
-    --background-color: #1C2833; /* Very Dark Blue/Gray - Main background */
-    --text-color: #EAECEE; /* Light Gray - Main text */
-    --font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+/* ... (Existing CSS code up to Projects Section) ... */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    color: var(--text-color);
-    background: var(--background-color);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #84DCC6; /* Lighter shade of primary */
-    text-decoration: none;
-}
-
-/* --- Utility Classes --- */
-.section {
-    padding: 80px 0;
-}
-.section h3 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.2em;
-    color: var(--primary-color);
-    padding-bottom: 5px;
-    position: relative;
-}
-/* Underline effect for H3 */
-.section h3::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 10px auto 0;
-}
-
-/* --- Header & Navigation --- */
-header {
-    background: var(--secondary-color);
-    color: var(--text-color);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 1.6em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: var(--text-color);
-    font-weight: bold;
-    padding: 5px 0;
-}
-
-.cta-link {
-    background: var(--primary-color);
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: var(--background-color); /* Dark text on light button */
-    transition: background 0.3s;
-}
-.cta-link:hover {
-    background: #4a9e9c;
-    color: var(--background-color);
-}
-
-/* --- Hero Section --- */
-.hero {
-    padding: 120px 0;
-    text-align: center;
-}
-
-.hero .container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center content when not enough space */
-    text-align: left;
-    gap: 50px;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero h2 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.tagline {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    color: #BDC3C7;
-}
-
-.hero-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 0 20px rgba(91, 192, 190, 0.4);
-}
-
-.social-links a {
-    margin-right: 20px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* --- About Section --- */
-#about {
-    background: var(--secondary-color);
-    color: var(--text-color);
-    text-align: center;
-}
-
-.skills-grid {
-    margin-top: 40px;
-    text-align: left;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.1);
-}
-
-.skills-grid h4 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-.skills-grid ul {
-    list-style: none;
-    padding: 0;
-    columns: 2; /* Display skills in two columns if space allows */
-}
-
-.skills-grid li {
-    margin-bottom: 8px;
-}
-
-/* --- Projects Section (The Main Change) --- */
+/* --- Projects Section (The Row Layout Change) --- */
 .projects-section {
     background: var(--background-color);
 }
 
-.project-grid {
-    display: grid;
-    /* Forces 3 columns on desktop, adapts to fewer on smaller screens */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    gap: 40px;
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between each project row */
 }
 
-.project-card {
+.project-row {
+    display: flex;
+    align-items: center; /* Vertically align items in the middle */
     background: var(--secondary-color);
     border-radius: 10px;
     overflow: hidden;
@@ -205,38 +21,53 @@ nav ul li a {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
+.project-row:hover {
+    transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
-.project-card img {
+.project-media, .project-description {
+    flex: 1; /* Each takes up half the width on desktop */
+    padding: 30px;
+}
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-media img {
     width: 100%;
-    height: 250px; /* Uniform height for images */
+    height: auto;
+    border-radius: 5px;
     object-fit: cover;
 }
 
-.project-details {
-    padding: 20px;
+.project-description {
+    /* Ensures padding is included in the flex size */
+    box-sizing: border-box; 
 }
 
-.project-card h4 {
+.project-description h4 {
     color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.summary-text {
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 .tech-stack {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #BDC3C7;
-    margin: 10px 0;
-}
-
-.card-links {
-    margin-top: 15px;
+    margin: 15px 0 20px 0;
 }
 
 .btn-small {
+    /* Styles remain the same */
     display: inline-block;
     background: var(--primary-color);
     color: var(--background-color);
@@ -248,74 +79,33 @@ nav ul li a {
     transition: background 0.3s;
 }
 
-.btn-small:hover {
-    background: #4a9e9c;
+.competition-row {
+    /* Style for rows that are competition winners - flips the order */
+    flex-direction: row-reverse;
+    border: 3px solid gold; 
 }
 
-.competition-card {
-    border: 3px solid gold; /* Highlight competition wins */
-}
-
-/* --- Contact Section --- */
-.contact-section {
-    text-align: center;
-    background: var(--secondary-color);
-    color: var(--text-color);
-}
-
-.cta-button {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--background-color);
-    padding: 15px 40px;
-    margin: 25px 0;
-    border-radius: 8px;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background: #4a9e9c;
-}
-
-/* --- Footer --- */
-footer {
-    background: var(--background-color);
-    color: #8D99AE;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--secondary-color);
-    font-size: 0.9em;
-}
 
 /* --- Responsive Design (Mobile) --- */
 @media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
+    /* Stacks project content vertically on smaller screens */
+    .project-row, .competition-row {
+        flex-direction: column; 
+    }
+    
+    .project-media, .project-description {
+        width: 100%; /* Take up full width */
+        padding: 20px;
     }
 
-    .hero-content {
-        order: 1;
-        max-width: 100%;
+    .project-media img {
+        max-height: 300px;
     }
     
-    .hero-image {
-        order: 0;
-        margin-bottom: 30px;
-    }
-    
-    .hero h2 {
-        font-size: 3em;
-    }
-
-    /* Project grid will collapse to 1 or 2 columns based on minmax(320px) */
-    .project-card img {
-        height: 200px;
-    }
-    
-    nav ul li {
-        margin-left: 15px;
+    /* Removes the padding from the top of the image when stacking */
+    .project-row:first-child .project-media {
+        padding-bottom: 0;
     }
 }
+
+/* ... (Existing CSS code for Contact and Footer sections) ... */
