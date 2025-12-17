@@ -13,16 +13,107 @@
             <h1>Camille's Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#hero">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="your_resume.pdf" target="_blank" class="cta-link">Resume</a>
-                    </li>
+                    <li><a href="index.html#hero">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="your_resume.pdf" target="_blank" class="cta-link">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
 
+
+    <section class="project-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <h1>Newton Robot Capstone Project</h1>
+                   <p class="project-tagline">Open-source quadruped robot with ML capabilities</p>
+
+                    <h2>Project Overview</h2>
+                    <p>
+                        Newton is an open-source quadruped robot developed as a capstone project with a focus on accessibility and innovation. The robot features advanced machine learning capabilities for walking algorithms and a custom-developed BLDC motor system with integrated drivers and encoders. The primary objective is to lower the barrier of entry for students, researchers, and hobbyists interested in robotics and legged locomotion.
+                    </p>
+                    <p>
+                        Built on the foundation of modular design principles, Newton provides a comprehensive platform for experimentation in autonomous movement, sensor integration, and motor control. Every component has been carefully designed to be reproducible and accessible.
+                    </p>
+                </div>
+                <div class="overview-image">
+                    <img src="images/newton_profile.jpg" alt="Newton Robot Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="detail-section">
+                <h3>Hardware Development</h3>
+                <p>
+                    Custom BLDC motor design optimized for quadruped locomotion. Integrated motor drivers and high-precision encoder systems enable accurate position feedback and coordinated leg movement. The frame is constructed using lightweight materials to maximize efficiency.
+                </p>
+                <ul class="tech-list">
+                    <li>BLDC Motors</li>
+                    <li>Custom Motor Drivers</li>
+                    <li>Rotary Encoders</li>
+                    <li>Microcontroller Integration</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>Software & ML</h3>
+                <p>
+                    Newton uses Python-based machine learning algorithms to optimize walking patterns and adapt to different terrain conditions. The system learns efficient gait parameters through reinforcement learning and simulation.
+                </p>
+                <ul class="tech-list">
+                    <li>Python ML Frameworks</li>
+                    <li>Gait Optimization</li>
+                    <li>Real-time Control Loop</li>
+                    <li>Sensor Data Processing</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>Communication Protocols</h3>
+                <p>
+                    Multi-protocol support allows seamless integration with various microcontrollers and sensors. The system uses I2C for sensor communication and CANbus for motor control synchronization across all four legs.
+                </p>
+                <ul class="tech-list">
+                    <li>I2C Protocol</li>
+                    <li>CANbus</li>
+                    <li>Serial Communication</li>
+                    <li>Sensor Fusion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-tech-stack">
+        <div class="container">
+            <h2>Technologies & Tools</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">BLDC Motors</span>
+                <span class="tech-tag">Encoders</span>
+                <span class="tech-tag">Motor Drivers</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">I2C</span>
+                <span class="tech-tag">CANbus</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Real-time Systems</span>
+                <span class="tech-tag">PCB Design</span>
+                <span class="tech-tag">Mechanical Engineering</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2>Want to see more projects?</h2>
+                <a href="index.html#projects" class="btn-primary">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
