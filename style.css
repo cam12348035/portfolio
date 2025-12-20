@@ -500,8 +500,23 @@ nav a {
     object-fit: cover;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
 .project-details {
     background: var(--background-color);
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    margin-bottom: 40px;
 }
 
 .detail-section {
