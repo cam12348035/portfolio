@@ -8,6 +8,7 @@
     --text-color: #EAECEE;
     --accent-hover: #84DCC6;
     --transition-speed: 0.3s;
+    --aspect-video: 16 / 9;
 }
 
 * {
@@ -270,6 +271,7 @@ nav a {
 }
 
 .project-video {
+    aspect-ratio: var(--aspect-video);
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -277,7 +279,7 @@ nav a {
 
 .project-video iframe {
     width: 100%;
-    height: 600px;
+    height: 100%;
     border-radius: 5px;
 }
 
