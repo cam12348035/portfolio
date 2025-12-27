@@ -34,15 +34,6 @@ const translations = {
     // Competitions Section
     otherCompetitions: "Other Competitions",
     cqiTitle: "Canadian/Quebec Engineering Competition",
-    seniorDesignTitle: "Senior Design",
-    seniorDesignDate: "CQI 2023,2026",
-    seniorDesignDesc: "A 12 hour design competition in which teams of 4 produce a robotic prototype in response to a problem presented on the same day.",
-    seniorDesignSkills: ["Firmware Development", "Robotics", "ESP32/8266", "I2C, SPI, UART"],
-    
-    programmingTitle: "Programming",
-    programmingDate: "CQI/CEC 2024,2025",
-    programmingDesc: "A 12-hour programming competition in which teams of four develop a software solution, product, or design, and present their work in competition with other teams.",
-    programmingSkills: ["Team-Based Development", "Debugging", "Algorithm Design", "Python, C++, Register-Level"],
     
     concordiaLeadershipTitle: "Concordia 2022 Student Leadership Conference",
     concordiaLeadershipDesc: "CASAxECA Consulting Competition, acheived 2nd place after developing a solution to a business consulting problem.",
@@ -64,15 +55,6 @@ const translations = {
     englympicsSkills: ["Oral Communication", "Adaptability", "Python, C++", "Hardware/Electronics"],
     
     engGamesTitle: "Engineering Games",
-    caseTitle: "Case/Consulting Competition",
-    caseDate: "2023, 2024",
-    caseDesc: "Developped a product or a complex solution to a given problem, and presented it to a judging panel of professionals and sponsors, acheiving 1st place in 2024.",
-    caseSkills: ["Oral Communication/Presentation", "Solution Making", "Team Communication", "Dynamic Research"],
-    
-    computerTitle: "Computer Academic Competition",
-    computerDate: "2025",
-    computerDesc: "Participated in a 6 hour academic computer engineering competition, with questions ranging from Python and Computer Science knowledge to register-level programming and Shakespeare programming language.",
-    computerSkills: ["Software", "Register-Level", "Embedded Programming", "Python"],
     
     // Newton Page
     newtonCapstone: "Newton Robot Capstone Project",
@@ -106,8 +88,7 @@ const translations = {
     conclusionTitle: "Conclusion",
     conclusionText: "Over the course of a full year, we achieved a fully functioning quadruped robot capable of walking. Although the final system had only 8 degrees of freedom, and had fewer functionalities than we had initially planned, it still completed our objectives.",
     conclusionText2: "More importantly however, we all learnt more then we could have imagined, and we gained experience that we have applied and will keep applying in our lives.",
-    conclusionLinkText: "You can find the final report for our capstone project ",
-    conclusionLinkHere: "here",
+    conclusionLinkText: "You can find the final report for our capstone project here",
 
     wantMore: "Want to see more projects?",
     backPortfolio: "Back to Portfolio",
@@ -149,15 +130,7 @@ const translations = {
     // Competitions Section
     otherCompetitions: "Autres Compétitions",
     cqiTitle: "Compétition Québécoise/Canadienne d’Ingénierie",
-    seniorDesignTitle: "Conception senior",
-    seniorDesignDate: "CQI 2023,2026",
-    seniorDesignDesc: "Compétition de conception de 12 heures dans laquelle des équipes de 4 produisent un prototype robotique en réponse à un problème présenté le même jour.",
-    seniorDesignSkills: ["Développement Embarqué", "Robotique", "ESP32/8266", "I2C, SPI, UART"],
-    
-    programmingTitle: "Programmation",
-    programmingDate: "CQI/CEC 2024,2025",
-    programmingDesc: "Compétition de programmation de 12 heures dans laquelle des équipes de quatre développent une solution logicielle, un produit ou un concept, et présentent leur travail.",
-    programmingSkills: ["Développement en équipe", "Débogage", "Conception d'algorithmes", "Python, C++, Register-Level"],
+
     
     concordiaLeadershipTitle: "Concordia 2022 Student Leadership Conference",
     concordiaLeadershipDesc: "Compétition de genie conseil CASAxECA, 2e place après avoir développé une solution à un problème de business consulting.",
@@ -179,15 +152,6 @@ const translations = {
     englympicsSkills: ["Communication orale", "Adaptabilité", "Python, C++", "Hardware/Électronique"],
     
     engGamesTitle: "Jeux de Génie",
-    caseTitle: "Compétition Genie Conseil",
-    caseDate: "2023, 2024",
-    caseDesc: "Developpement d'un produit ou d'une solution complexe à un problème donné, et presentation à un jury de professionnels et de commanditaires, atteignant la 1ère place en 2024.",
-    caseSkills: ["Communication/Présentation orale", "Création de solutions", "Communication d'équipe"],
-    
-    computerTitle: "Compétition Académique: Informatique",
-    computerDate: "2025",
-    computerDesc: "Compétition académique en génie informatique de 6 heures, avec des questions allant des connaissances en Python et informatique à la programmation au niveau des registres et au langage ShakespearePL.",
-    computerSkills: ["Logiciel", "Register-Level", "Programmation embarquée", "Python"],
     
     // Newton Page
     newtonCapstone: "Projet de fin d'études: Robot Newton",
@@ -220,8 +184,7 @@ const translations = {
     conclusionTitle: "Resultats",
     conclusionText: "Au cours d’une année complète, nous avons complété un robot quadrupède capable de marcher. Bien que le robot final n'ait que huit degrés de mouvement, et avait moins de fonctionnalités que prévu initialement, la solution répondait parfaitement à nos objectifs initiaux.",
     conclusionText2: "D’un autre côté, au cours de cette année, nous avons appris bien plus que nous aurions pu imaginer, et nous utilisons cette grande expérience dans chacun de nos projets et nos poursuites.",
-    conclusionLinkText: "Vous pouvez trouver le rapport final de notre projet de fin d'études ",
-    conclusionLinkHere: "ici",
+    conclusionLinkText: "Vous pouvez trouver le rapport final de notre projet de fin d'études ici",
 
     wantMore: "Voulez-vous voir plus de projets?",
     backPortfolio: "Retour au portfolio",
