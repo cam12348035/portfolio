@@ -103,6 +103,12 @@ const translations = {
     newton3Item2: "Domain randomization (friction, mass, terrain) for a smaller gap transfer",
     newton3Item3: "Modular simulation components (environment, task, agent)",
     
+    conclusionTitle: "Conclusion",
+    conclusionText: "Throughout a full year of work, we achieved a fully functioning quadruped robot capable of walking, although with only 8 degrees of freedom, and with less functionalities then we thought.",
+    conclusionText2: "However, we all learnt more then we could have imagined, and we gained experience that we have applied and will keep applying in our lives.",
+    conclusionLinkText: "You can find the final report for our capstone project ",
+    conclusionLinkHere: "here",
+
     wantMore: "Want to see more projects?",
     backPortfolio: "Back to Portfolio",
     
@@ -214,6 +220,11 @@ const translations = {
     newton3Item3: "Communication série",
     newton3Item4: "Fusion de capteurs",
     
+    conclusionTitle: "Conclusion",
+    conclusionText: "Placeholder: Cette section résume les réalisations clés et les apprentissages du projet capstone Newton Robot. Discutez de l'impact du travail, des défis surmontés et des orientations futures du projet.",
+    conclusionLinkText: "Placeholder: En savoir plus sur le projet",
+    conclusionLinkHere: "ici",
+
     wantMore: "Voulez-vous voir plus de projets?",
     backPortfolio: "Retour au portfolio",
     
